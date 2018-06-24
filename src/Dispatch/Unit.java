@@ -2,19 +2,25 @@ package Dispatch;
 import org.bukkit.entity.Player;
 
 public class Unit {
-    Unit un = new Unit("u");
     private String unitName;
-    private Player playerName; //If Multiple, Print Both
-    private Player unitLocation; //^^
+    private Player player;
 
-    public Unit(String Name, Player) {
+    public Unit(String Name, Player player) {
         this.unitName = Name;
-        this.playerName = Player;
+        this.player = Player;
+        Commands.units.add(this);
     }
+
+    public Player getPlayer(){
+        return player;
+    }
+
+    public String getName(){
+        return unitName;
+    }
+
     public String toString() {
-    return this.playerName+"is at"+unitLocation;
-
-
+        return this.playerName+"is at"+unitLocation;
     }
 
 
