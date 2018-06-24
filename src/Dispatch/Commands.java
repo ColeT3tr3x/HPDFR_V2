@@ -40,16 +40,20 @@ public class Commands implements CommandExecutor {
             sender.sendMessage(color("&1&l[=========== &5&lMade by T3tr3x &1&l=========]"));
         }
         if ((args.length == 1) && args[0].equalsIgnoreCase("add")) {
-
-        }
-
+            !map.containsValue(Object args[1]);
+            if (!map.containsKey(Unit)) {
+                 map.keySet(Unit);
             }
-            sender.sendMessage(color(args[1] + "Has Been Added!"));
-
-            sender.sendMessage("Is that unit already made?" + args[1] + "Not added!");
-            return true;
+                 map.put(Unit, args[1]);
+                 sender.sendMessage(color(args[1] + "&lHas Been Added!"));
         }
-    }
+
+        }
+        sender.sendMessage("False");
+        return true;
+        }
+
+        }
 
 
 
